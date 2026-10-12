@@ -51,7 +51,12 @@ public class Aplicacao {
                 int codigo = scanner.nextInt();
                 scanner.nextLine();
 
-                biblioteca.consultarLeitor(codigo);
+                Leitor leitor = biblioteca.consultarLeitor(codigo);
+                if (leitor != null){
+                    System.out.println(leitor);
+                } else {
+                    System.out.println("Leitor não encontrado.");
+                }
                 break;
             }
 
@@ -126,7 +131,12 @@ public class Aplicacao {
                 int codigo = scanner.nextInt();
                 scanner.nextLine();
 
-                biblioteca.consultarLivro(codigo);
+                Livro livro = biblioteca.consultarLivro(codigo);
+                if (livro != null){
+                    System.out.println(livro);
+                } else {
+                    System.out.println("Livro não encontrado.");
+                }
                 break;
             }
 

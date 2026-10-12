@@ -61,6 +61,6 @@ public class Emprestimo {
     }
 
     public String toString() {
-        return "Código: " + codigo + ", Leitor: " + leitor.toString() + ", Data: " + dataEmprestimo + ", Aberto: " + aberto + ", Itens: " + itens.size();
+        return "\n=== Emprestimos ===\nCódigo: " + codigo + "\n" + leitor.toString() + "\nData: " + dataEmprestimo + "\n - Aberto: " + aberto + "\n - Itens: " + itens.size();
     }
 }

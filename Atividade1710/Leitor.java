@@ -34,6 +34,6 @@ public class Leitor {
     }
 
     public String toString() {
-        return "Código: " + codigo + ", Nome: " + nome + ", Email: " + email;
+        return "\n=== Dados do Leitor ===\nCódigo: " + codigo + "\nNome: " + nome + "\nEmail: " + email;
     }
 }

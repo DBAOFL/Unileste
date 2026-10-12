@@ -48,6 +48,6 @@ public class Livro {
     }
 
     public String toString() {
-        return "Código: " + codigo + ", Título: " + titulo + ", Autor: " + autor + ", Disponível: " + disponivel;
+        return "\n=== Dados do Livro ===\nCódigo: " + codigo + "\nTítulo: " + titulo + "\nAutor: " + autor + "\nDisponível: " + disponivel;
     }
 }

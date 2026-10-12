@@ -26,8 +26,6 @@ public class Biblioteca {
                 return leitor;
             }
         }
-
-        System.out.println("Leitor não encontrado.");
         return null;
     }
 
@@ -147,6 +145,7 @@ public class Biblioteca {
             if (!emprestimo.adicionarLivro(livro)) {
                 return false;
             }
+            livro.emprestar();
         }
 
         this.emprestimos.add(emprestimo);
