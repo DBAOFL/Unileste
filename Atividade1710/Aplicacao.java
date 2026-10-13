@@ -26,15 +26,37 @@ public class Aplicacao {
     private void processarOpcao(int opcao) {
         switch (opcao) {
             case 1: {
-                System.out.print("Digite o código do leitor: ");
-                int codigo = scanner.nextInt();
-                scanner.nextLine();
-
-                System.out.print("Digite o nome do leitor: ");
-                String nome = scanner.nextLine();
-
-                System.out.print("Digite o e-mail do leitor: ");
-                String email = scanner.nextLine();
+        int codigo;
+        String nome;
+        String email;
+        do {
+            System.out.print("Digite o código do leitor: ");
+            codigo = scanner.nextInt();
+            scanner.nextLine();
+            if (codigo <= 0) {
+                System.out.println("Código inválido. Digite um código maior que 0.");
+            } else {
+                break;
+            }
+        } while (true);
+        do {
+            System.out.print("Digite o nome do leitor: ");
+            nome = scanner.nextLine();
+            if (nome.isBlank()) {
+                System.out.println("Nome inválido. Digite um nome válido.");
+            } else {
+                break;
+            }
+        } while (true);
+        do {
+            System.out.print("Digite o email do leitor: ");
+            email = scanner.nextLine();
+            if (email.isBlank()) {
+                System.out.println("Email inválido. Digite um email válido.");
+            } else {
+                break;
+            }
+        } while (true);
 
                 Leitor leitor = new Leitor(codigo, nome, email);
 
@@ -106,15 +128,37 @@ public class Aplicacao {
             }
 
             case 6: {
-                System.out.print("Digite o código do livro: ");
-                int codigo = scanner.nextInt();
-                scanner.nextLine();
-
-                System.out.print("Digite o título do livro: ");
-                String titulo = scanner.nextLine();
-
-                System.out.print("Digite o autor do livro: ");
-                String autor = scanner.nextLine();
+                int codigo;
+                String titulo;
+                String autor;
+                do {
+                    System.out.print("Digite o código do livro: ");
+                    codigo = scanner.nextInt();
+                    scanner.nextLine();
+                    if (codigo <= 0) {
+                        System.out.println("Código inválido. Digite um código maior que 0.");
+                    } else {
+                        break;
+                    }
+                } while (true);
+                do {
+                    System.out.print("Digite o título do livro: ");
+                    titulo = scanner.nextLine();
+                    if (titulo.isBlank()) {
+                        System.out.println("Título inválido. Digite um título válido.");
+                    } else {
+                        break;
+                    }
+                } while (true);
+                do {
+                    System.out.print("Digite o autor do livro: ");
+                    autor = scanner.nextLine();
+                    if (autor.isBlank()) {
+                        System.out.println("Autor inválido. Digite um autor válido.");
+                    } else {
+                        break;
+                    }
+                } while (true);
 
                 Livro livro = new Livro(codigo, titulo, autor);
 
